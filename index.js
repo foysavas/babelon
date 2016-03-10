@@ -1,8 +1,8 @@
 'use strict';
 
-var fs = require('fs');
+let fs = require('fs');
 
-var babelon = {};
+let babelon = {};
 
 babelon.evalFileSync = function(filename, locals) {
   let tmpl = fs.readFileSync(filename);
@@ -12,9 +12,9 @@ babelon.evalFileSync = function(filename, locals) {
       "transform-es2015-arrow-functions"
     ]
   });
-  var localNames = [];
-  var localValues = [];
-  for (var name in locals) {
+  let localNames = [];
+  let localValues = [];
+  for (let name in locals) {
     localNames.push(name);
     localValues.push(locals[name]);
   }
