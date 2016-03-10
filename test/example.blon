@@ -1,0 +1,11 @@
+{
+  user: {
+    id: user_id, /* variables */
+    name: `${faker.name.firstName()} ${faker.name.lastName()}` // templates
+  },
+  posts: posts.map((post) => ({ // iterators
+    id: post.id
+  })),
+  is_active,
+  ...misc
+}

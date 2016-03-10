@@ -1,0 +1,16 @@
+{
+  "name": "babelon",
+  "version": "1.0.0",
+  "description": "JSON templates using ES6+ object notation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Foy Savas",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.5.2",
+    "babel-plugin-transform-es2015-template-literals": "^6.6.5"
+  }
+}
