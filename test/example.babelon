@@ -6,6 +6,6 @@
   posts: posts.map((post) => ({ // iterators
     id: post.id
   })),
-  is_active,
-  ...misc
+  ...misc, // object spread
+  is_active // property shorthand
 }

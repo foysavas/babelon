@@ -1,25 +1,45 @@
 'use strict';
+let assert = require('assert');
 
 let babelon = require('../index.js');
 
-// locals
-let faker = {};
-faker.name = {};
-faker.name.firstName = function(){ return 'First'; }
-faker.name.lastName = function(){ return 'Last'; }
-let user_id = 1;
-let is_active = true;
-let posts = [
-  {id: 1},
-  {id: 2}
-];
-
-let json = babelon.evalFileSync('./test/example.blon', {
-  'faker': faker,
-  user_id: user_id,
+let locals = {
+  faker: {
+    name: {
+      firstName: function(){ return 'First'; },
+      lastName: function(){ return 'Last'; }
+    }
+  },
+  user_id: 1,
   is_active: true,
-  posts: posts,
-  misc: {}
-});
+  posts: [
+    {id: 1},
+    {id: 2},
+    {id: 3}
+  ],
+  misc: {
+    is_active: false,
+    is_banned: false
+  }
+};
 
-console.log(json);
+let tmplFile = `${__dirname}/example.babelon`;
+
+let obj = babelon.evalFile(tmplFile, locals);
+assert.equal(obj.user.id, 1);
+assert.equal(obj.user.name, 'First Last');
+assert.equal(obj.posts.length, 3);
+assert.equal(obj.is_banned, false);
+assert.equal(obj.is_active, true);
+
+obj = babelon.compileFile(tmplFile)(locals);
+assert.equal(obj.user.id, 1);
+assert.equal(obj.user.name, 'First Last');
+assert.equal(obj.posts.length, 3);
+assert.equal(obj.is_banned, false);
+assert.equal(obj.is_active, true);
+
+console.log('OK')
+
+// obj = babelon.evalFile(tmplFile, {faker: locals.faker, user_id: 1, posts: [{id: 1}], misc: {}, is_active: true});
+// console.log(obj);

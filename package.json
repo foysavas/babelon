@@ -4,13 +4,18 @@
   "description": "JSON templates using ES6+ object notation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/index.js"
   },
   "author": "Foy Savas",
   "license": "MIT",
   "dependencies": {
     "babel": "^6.5.2",
+    "babel-core": "^6.7.2",
+    "babel-plugin-syntax-object-rest-spread": "^6.5.0",
     "babel-plugin-transform-es2015-arrow-functions": "^6.5.2",
-    "babel-plugin-transform-es2015-template-literals": "^6.6.5"
+    "babel-plugin-transform-es2015-shorthand-properties": "^6.5.0",
+    "babel-plugin-transform-es2015-spread": "^6.6.5",
+    "babel-plugin-transform-es2015-template-literals": "^6.6.5",
+    "babel-plugin-transform-object-rest-spread": "^6.6.5"
   }
 }
