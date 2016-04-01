@@ -1,6 +1,6 @@
 {
   "name": "babelon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JSON templates using ES6+ object notation",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,7 @@
     "babel-plugin-transform-es2015-shorthand-properties": "^6.5.0",
     "babel-plugin-transform-es2015-spread": "^6.6.5",
     "babel-plugin-transform-es2015-template-literals": "^6.6.5",
-    "babel-plugin-transform-object-rest-spread": "^6.6.5"
+    "babel-plugin-transform-object-rest-spread": "^6.6.5",
+    "babel-plugin-transform-strict-mode": "^6.6.5"
   }
 }

@@ -21,6 +21,10 @@ Let's say you want to mockup an JSON response, you can use `babelon` to write a 
   posts: posts.map((post) => ({ // iterators
     id: post.id
   })),
+  addOne: (v) => { // functions
+    let a = 1;
+    return v+a;
+  },
   ...misc, // object spread properties
   is_active // property shorthand
 }
@@ -38,6 +42,7 @@ let obj = tmpl({faker, user_id: 1, posts: [{id: 1}], misc: {}, is_active: true})
 // obj:
 // { user: { id: 1, name: 'First Last' },
 //   posts: [ { id: 1 } ],
+//   addOne: [Function],
 //   is_active: true }
 ```
 

@@ -38,6 +38,7 @@ assert.equal(obj.user.name, 'First Last');
 assert.equal(obj.posts.length, 3);
 assert.equal(obj.is_banned, false);
 assert.equal(obj.is_active, true);
+assert.equal(obj.addOne(1), 2);
 
 console.log('OK')
 

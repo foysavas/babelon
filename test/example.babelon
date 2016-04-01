@@ -6,6 +6,10 @@
   posts: posts.map((post) => ({ // iterators
     id: post.id
   })),
+  addOne: (v) => { // functions
+    let a = 1;
+    return v+a;
+  },
   ...misc, // object spread
   is_active // property shorthand
 }
