@@ -14,6 +14,13 @@ require('babel-plugin-transform-strict-mode');
 
 let babelon = {};
 
+require("babel-plugin-syntax-object-rest-spread");
+require("babel-plugin-transform-object-rest-spread");
+require("babel-plugin-transform-es2015-arrow-functions");
+require("babel-plugin-transform-es2015-shorthand-properties");
+require("babel-plugin-transform-es2015-spread");
+require("babel-plugin-transform-es2015-template-literals");
+
 babelon.compile = function(tmpl) {
   let trans = require("babel-core").transform(`var __babelon_object__ = ${tmpl};`, {
     plugins: [

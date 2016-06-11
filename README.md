@@ -6,6 +6,10 @@ Like JSON, but really JS.
 
 `babelon` uses `vm`, `Function`, and/or `eval`, so only use it where you trust the input.
 
+## Install
+
+`npm i --save babelon`
+
 ## Example
 
 Let's say you want to mockup an JSON response, you can use `babelon` to write a template:
