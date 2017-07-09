@@ -1,6 +1,6 @@
 {
   "name": "babelon",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "JSON templates using ES6+ object notation",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,15 @@
   },
   "author": "Foy Savas",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/foysavas/babelon"
+  },
+  "bugs": {
+    "url": "https://github.com/foysavas/babelon/issues"
+  },
+  "homepage": "https://github.com/foysavas/babelon",
   "dependencies": {
-    "babel": "^6.5.2",
     "babel-core": "^6.7.2",
     "babel-plugin-syntax-object-rest-spread": "^6.5.0",
     "babel-plugin-transform-es2015-arrow-functions": "^6.5.2",
