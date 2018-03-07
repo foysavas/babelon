@@ -1,6 +1,6 @@
 {
   "name": "babelon",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "JSON templates using ES6+ object notation",
   "main": "index.js",
   "scripts": {
